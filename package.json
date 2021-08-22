@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gumballhead/wedding.git"
-  },
+  "repository": "git+https://github.com/gumballhead/wedding.git",
   "author": "Andrew Kirkegaard",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gumballhead/wedding/issues"
   },
-  "homepage": "https://github.com/gumballhead/wedding#readme"
+  "homepage": "https://github.com/gumballhead/wedding#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0"
+  }
 }
