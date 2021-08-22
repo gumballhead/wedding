@@ -5,10 +5,36 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@popperjs/core@npm:^2.9.3":
+"@popperjs/core@npm:^2.9.2, @popperjs/core@npm:^2.9.3":
   version: 2.9.3
   resolution: "@popperjs/core@npm:2.9.3"
   checksum: 4cb94c271eaa13416ab8169c6af778c5b6160614351a79c68e8219d6ee0a40b8f71080ca29e139591c7c0c8e08fc1627d0e18d40a64609713a42b58d683a009d
+  languageName: node
+  linkType: hard
+
+"@types/bootstrap@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@types/bootstrap@npm:5.1.2"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+    "@types/jquery": "*"
+  checksum: 7896ff7e2f8130abb018b01b7c6b29f584a59d7a353ee2431ef1cbde1acbea00c2eab79df420268c89c0da95e99751159ddfbd2c072dfeac7760034eb13f7c75
+  languageName: node
+  linkType: hard
+
+"@types/jquery@npm:*":
+  version: 3.5.6
+  resolution: "@types/jquery@npm:3.5.6"
+  dependencies:
+    "@types/sizzle": "*"
+  checksum: 0ff97741ed79463545e2fd6969639579d112aeb316b70a9928c39ae031d68386e8096755d4b3c1b3aa252e024ae11d30a4ba47bc454e4fb9e232d5ded09f8f81
+  languageName: node
+  linkType: hard
+
+"@types/sizzle@npm:*":
+  version: 2.3.3
+  resolution: "@types/sizzle@npm:2.3.3"
+  checksum: 586a9fb1f6ff3e325e0f2cc1596a460615f0bc8a28f6e276ac9b509401039dd242fa8b34496d3a30c52f5b495873922d09a9e76c50c2ab2bcc70ba3fb9c4e160
   languageName: node
   linkType: hard
 
@@ -26,6 +52,28 @@ __metadata:
   resolution: "kirkegaard.wedding@workspace:."
   dependencies:
     "@popperjs/core": ^2.9.3
+    "@types/bootstrap": ^5.1.2
     bootstrap: ^5.1.0
+    typescript: ^4.3.5
   languageName: unknown
   linkType: soft
+
+typescript@^4.3.5:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: bab033b5e2b0790dd35b77fd005df976ef80b8d84fd2c6e63cc31808151875beae9216e5a315fe7068e8499905c3c354248fe83272cdfc13b7705635f0c66c97
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
+  version: 4.3.5
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: bc2c4fdf0f1557fdafe4ef74848c72ebd9c8c60829568248f869121aea2bb20e16649a252431d0acb185ec118143be22bed73d08f64379557810d82756afedde
+  languageName: node
+  linkType: hard
