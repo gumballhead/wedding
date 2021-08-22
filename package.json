@@ -1,0 +1,19 @@
+{
+  "name": "kirkegaard.wedding",
+  "version": "0.1.0",
+  "description": "Information and RSVP for guests at the Kirkegaard wedding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gumballhead/wedding.git"
+  },
+  "author": "Andrew Kirkegaard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gumballhead/wedding/issues"
+  },
+  "homepage": "https://github.com/gumballhead/wedding#readme"
+}
