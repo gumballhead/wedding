@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 
 const node_modules = path.resolve(__dirname, "./node_modules");
 const src = path.resolve(__dirname, "./src");
@@ -40,6 +41,13 @@ module.exports = (env, options) => ({
                     options: {
                         sourceMap: true
                     }
+                }, {
+                    loader: "postcss-loader",
+                    options: {
+                        postcssOptions: {
+                            plugins: [autoprefixer]
+                        }
+                    }
                 }
             ]
         }, {
@@ -54,10 +62,7 @@ module.exports = (env, options) => ({
         }),
         new HtmlWebPackPlugin({ template: "index.html" }),
         new CopyPlugin({
-            patterns: [{
-                from: "CNAME",
-                to: "./"
-            }]
+            patterns: [{ from: "CNAME", to: "./" }]
         })
     ]
 });
