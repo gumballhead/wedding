@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const node_modules = path.resolve(__dirname, "./node_modules");
 const src = path.resolve(__dirname, "./src");
@@ -53,7 +52,6 @@ module.exports = (env, options) => ({
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].css"
         }),
-        new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({ template: "index.html" }),
         new CopyPlugin({
             patterns: [{

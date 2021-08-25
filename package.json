@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack serve --mode=development",
-    "build": "webpack build --mode=production --progress"
+    "clean": "rm -rf dist/**/*",
+    "build": "yarn clean && webpack build --mode=production --progress",
+    "deploy": "yarn build && cd dist && git add --all && git commit -m 'Deploy wedding website' && git push origin gh-pages"
   },
   "repository": "git+https://github.com/gumballhead/wedding.git",
   "author": "Andrew Kirkegaard",
@@ -18,7 +20,6 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.1.2",
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
