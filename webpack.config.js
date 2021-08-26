@@ -51,8 +51,8 @@ module.exports = (env, options) => ({
                 }
             ]
         }, {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: "asset/resource"
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            type: 'asset/resource',
         }]
     },
     plugins: [
@@ -62,7 +62,10 @@ module.exports = (env, options) => ({
         }),
         new HtmlWebPackPlugin({ template: "index.html" }),
         new CopyPlugin({
-            patterns: [{ from: "CNAME", to: "./" }]
+            patterns: [
+                { from: "CNAME", to: "./" },
+                { from: "img", to: "img" }
+            ]
         })
     ]
 });

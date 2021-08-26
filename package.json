@@ -8,7 +8,7 @@
     "dev": "webpack serve --mode=development",
     "clean": "rimraf 'dist/**/*'",
     "build": "yarn clean && webpack build --mode=production --progress",
-    "deploy": "yarn build && cd dist && git add --all && git commit -m 'Deploy wedding website' && git push origin gh-pages"
+    "deploy": "git worktree add dist gh-pages -f && yarn build && cd dist && git add --all && git commit -m 'Deploy wedding website' && git push origin gh-pages"
   },
   "repository": "git+https://github.com/gumballhead/wedding.git",
   "author": "Andrew Kirkegaard",

@@ -1,1 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    @extend .bg-light;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    @extend .mb-5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    @extend .container;
+    @extend .mx-auto;
+    margin-top: 64px;
+
+    h4 {
+        @extend .text-center;
+        @extend .fw-bold;
+        @extend .mb-5;
+    }
+}
+
+.gallery {
+    @extend .p-0;
+}
+
+.events {
+    @extend .shadow-lg;
+    @extend .p-5;
+
+    .col {
+        @extend .px-5;
+
+        &:first-child {
+            @extend .border-end;
+            @extend .border-2;
+        }
+    }
+
+    p {
+        @extend .mb-5;
+    }
+}
+
+#toolbar {
+    @extend .pt-5;
+    @extend .px-3;
+    @extend .bg-light;
+    @extend .text-center;
+    @extend .text-dark;
+    @extend .vstack;
+
+    &.collapsed {
+        @extend .p-3;
+        @extend .shadow;
+        @extend .sticky-top;
+        @extend .hstack;
+        @extend .gap-1;
+        align-items: baseline;
+
+        @include media-breakpoint-between(xs, md) {
+            h1 {
+                width: 100%;
+            }
+
+            h3 {
+                display: none;
+            }
+        }
+
+        h3:not(:last-child)::after {
+            @extend .mx-2;
+            content: "\a0\b7"
+        }
+    }
+
+    .title {
+        font-family: "Arizonia", cursive;
+        @extend .display-5;
+        @extend .fw-bold;
+        @extend .px-5;
+
+        .ampersand {
+            @extend .text-danger
+        }
+    }
+
+    h3 {
+        font-family: "Bebas Neue", cursive;
+        @extend .text-center;
+        @extend .align-middle;
+        @extend .text-body;
+        @extend .text-uppercase;
+    }
+}
+
+.carousel img {
+    @extend .w-100;
+    @extend .d-block;
+    @extend .rounded-3;
+}
