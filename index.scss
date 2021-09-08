@@ -5,10 +5,10 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    @extend .bg-light;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
     @extend .mb-5;
+    @extend .bg-light;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -18,34 +18,43 @@ a {
 .section {
     @extend .container;
     @extend .mx-auto;
-    margin-top: 64px;
+    margin-top: 10rem;
 
     h4 {
+        @extend .text-uppercase;
         @extend .text-center;
         @extend .fw-bold;
-        @extend .mb-5;
+        @extend .my-5;
     }
 }
 
 .gallery {
     @extend .p-0;
+    @extend .shadow;
+}
+
+img.bitmoji {
+    @extend .mx-auto;
+    @extend .d-block;
+    @extend .rounded-circle;
+    @extend .border-3;
+    @extend .border;
 }
 
 .events {
-    @extend .shadow-lg;
+    @extend .shadow;
     @extend .p-5;
 
     .col {
-        @extend .px-5;
-
-        &:first-child {
-            @extend .border-end;
+        &:last-child {
+            @extend .px-5;
+            @extend .border-start;
             @extend .border-2;
         }
     }
 
-    p {
-        @extend .mb-5;
+    .row {
+        @extend .py-3;
     }
 }
 
@@ -63,7 +72,7 @@ a {
         @extend .sticky-top;
         @extend .hstack;
         @extend .gap-1;
-        align-items: baseline;
+        @extend .align-items-baseline;
 
         @include media-breakpoint-between(xs, md) {
             h1 {

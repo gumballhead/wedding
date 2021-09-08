@@ -1,5 +1,5 @@
 import "bootstrap/js/src/carousel"
-import "../style/index.scss"
+import "./index.scss"
 
 function collapseToolbar() {
     const toolbar = document.getElementById("toolbar");

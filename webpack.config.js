@@ -5,11 +5,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
 const node_modules = path.resolve(__dirname, "./node_modules");
-const src = path.resolve(__dirname, "./src");
 const dist = path.resolve(__dirname, "dist");
 
 module.exports = (env, options) => ({
-    entry: "./src/index.ts",
+    entry: "./index.ts",
     devtool: "source-map",
     optimization: { usedExports: true },
     output: {
@@ -22,7 +21,7 @@ module.exports = (env, options) => ({
         hot: true
     },
     resolve: {
-        modules: [src, node_modules],
+        modules: [node_modules],
         extensions: [".js", ".ts"]
     },
     module: {
