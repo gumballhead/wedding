@@ -17,8 +17,7 @@ a {
 
 .section {
     @extend .container;
-    @extend .mx-auto;
-    margin-top: 10rem;
+    margin: 3rem auto 8rem auto;
 
     h4 {
         @extend .text-uppercase;
