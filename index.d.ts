@@ -1,3 +1,3 @@
 import "bootstrap/js/src/carousel";
-import "../style/index.scss";
+import "./index.scss";
 //# sourceMappingURL=index.d.ts.map
