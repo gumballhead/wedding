@@ -38,6 +38,7 @@ img.bitmoji {
     @extend .rounded-circle;
     @extend .border-3;
     @extend .border;
+    @extend .shadow;
 }
 
 .events {
