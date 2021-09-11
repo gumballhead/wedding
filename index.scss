@@ -31,7 +31,7 @@ a {
         @extend .gap-1;
         @extend .align-items-baseline;
 
-        @include media-breakpoint-between(xs, md) {
+        @include media-breakpoint-down(sm) {
             h1 {
                 width: 100%;
             }
@@ -68,7 +68,7 @@ a {
 }
 
 .section {
-    @extend .container;
+    @extend .container-md;
     margin: 3rem auto 8rem auto;
 
     h4 {
