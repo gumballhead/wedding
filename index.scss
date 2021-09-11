@@ -15,49 +15,6 @@ a {
     text-decoration: none;
 }
 
-.section {
-    @extend .container;
-    margin: 3rem auto 8rem auto;
-
-    h4 {
-        @extend .text-uppercase;
-        @extend .text-center;
-        @extend .fw-bold;
-        @extend .my-5;
-    }
-}
-
-.gallery {
-    @extend .p-0;
-    @extend .shadow;
-}
-
-img.bitmoji {
-    @extend .mx-auto;
-    @extend .d-block;
-    @extend .rounded-circle;
-    @extend .border-3;
-    @extend .border;
-    @extend .shadow;
-}
-
-.events {
-    @extend .shadow;
-    @extend .p-5;
-
-    .col {
-        &:last-child {
-            @extend .px-5;
-            @extend .border-start;
-            @extend .border-2;
-        }
-    }
-
-    .row {
-        @extend .py-3;
-    }
-}
-
 #toolbar {
     @extend .pt-5;
     @extend .px-3;
@@ -110,8 +67,48 @@ img.bitmoji {
     }
 }
 
-.carousel img {
-    @extend .w-100;
-    @extend .d-block;
-    @extend .rounded-3;
+.section {
+    @extend .container;
+    margin: 3rem auto 8rem auto;
+
+    h4 {
+        @extend .text-uppercase;
+        @extend .text-center;
+        @extend .fw-bold;
+        @extend .my-5;
+    }
 }
+
+.gallery {
+    @extend .p-0;
+    @extend .shadow;
+
+    img {
+        @extend .w-100;
+        @extend .d-block;
+        @extend .rounded-3;
+    }
+}
+
+.events {
+    @extend .shadow;
+    @extend .p-5;
+
+
+    img.bitmoji {
+        @extend .mx-auto;
+        @extend .d-block;
+        @extend .rounded-circle;
+        @extend .border-3;
+        @extend .border;
+        @extend .shadow;
+    }
+
+    .row {
+        @extend .ps-3;
+        @extend .border-start;
+        @extend .border-2;
+        @extend .my-3;
+    }
+}
+
