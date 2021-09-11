@@ -96,6 +96,10 @@ a {
     @extend .shadow;
     @extend .p-5;
 
+    h5 {
+        @extend .mb-4;
+    }
+
     img.bitmoji {
         @extend .mx-auto;
         @extend .d-block;
@@ -114,7 +118,7 @@ a {
             @extend .my-3;
 
             img {
-                @extend .me-3;
+                @extend .me-4;
 
                 @include media-breakpoint-down(sm) {
                     display: none;
@@ -123,7 +127,7 @@ a {
 
             .description {
                 @extend .h-100;
-                @extend .ps-3;
+                @extend .ps-4;
                 @extend .border-start;
                 @extend .border-2;
 
