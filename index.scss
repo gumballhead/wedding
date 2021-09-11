@@ -5,7 +5,6 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    @extend .mb-5;
     @extend .bg-light;
     @extend .mx-auto;
     font-weight: 300;
@@ -116,14 +115,11 @@ a {
         .event {
             @extend .hstack;
             @extend .my-3;
+            @extend .align-items-start;
 
             img {
                 @extend .me-4;
                 @extend .rounded-1;
-
-                @include media-breakpoint-down(sm) {
-                    display: none;
-                }
             }
 
             .description {
