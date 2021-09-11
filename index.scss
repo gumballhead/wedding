@@ -7,6 +7,7 @@
 body {
     @extend .mb-5;
     @extend .bg-light;
+    @extend .mx-auto;
     font-weight: 300;
     font-family: "Open Sans", sans-serif;
 }
@@ -70,6 +71,7 @@ a {
 .section {
     @extend .container-md;
     margin: 3rem auto 8rem auto;
+    max-width: 1024px;
 
     h4 {
         @extend .text-uppercase;
@@ -94,7 +96,6 @@ a {
     @extend .shadow;
     @extend .p-5;
 
-
     img.bitmoji {
         @extend .mx-auto;
         @extend .d-block;
@@ -104,11 +105,35 @@ a {
         @extend .shadow;
     }
 
-    .row {
-        @extend .ps-3;
-        @extend .border-start;
-        @extend .border-2;
-        @extend .my-3;
+    .date {
+        @extend .row;
+        @extend .my-5;
+
+        .event {
+            @extend .hstack;
+            @extend .my-3;
+
+            img {
+                @extend .me-3;
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+
+            .description {
+                @extend .h-100;
+                @extend .ps-3;
+                @extend .border-start;
+                @extend .border-2;
+
+                @include media-breakpoint-down(sm) {
+                    border: none !important;
+                    padding: 0 !important;
+                }
+            }
+        }
     }
 }
+
 
