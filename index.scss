@@ -67,9 +67,18 @@ a {
     }
 }
 
+#content {
+    @extend .px-5;
+    @extend .py-3;
+
+    @include media-breakpoint-only(xs) {
+        padding: 0 !important;
+    }
+}
+
 .section {
     @extend .container-md;
-    margin: 3rem auto 8rem auto;
+    margin: 3rem auto 3rem auto;
     max-width: 1024px;
 
     h4 {
@@ -83,6 +92,7 @@ a {
 .gallery {
     @extend .p-0;
     @extend .shadow;
+    margin-bottom: 5rem;
 
     img {
         @extend .w-100;
