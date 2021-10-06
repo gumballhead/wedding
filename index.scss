@@ -17,28 +17,48 @@ a {
 
 #toolbar {
     @extend .pt-5;
-    @extend .px-3;
+    @extend .px-5;
     @extend .bg-light;
     @extend .text-center;
     @extend .text-dark;
     @extend .vstack;
+    @extend .mx-auto;
+    max-width: 1024px;
+
+    .btn {
+        @extend .mx-auto;
+        @extend .my-3;
+        @extend .shadow;
+    }
 
     &.collapsed {
-        @extend .p-3;
+        @extend .py-3;
+        @extend .px-5;
         @extend .shadow;
         @extend .sticky-top;
         @extend .hstack;
-        @extend .gap-1;
         @extend .align-items-baseline;
+        @extend .justify-content-around;
+        @extend .justify-content-md-between;
 
-        @include media-breakpoint-down(sm) {
-            h1 {
-                width: 100%;
-            }
+        .btn {
+            @extend .m-0;
+        }
 
-            h3 {
+        .date-location {
+            @extend .hstack;
+            @extend .mt-2;
+            @extend .mx-3;
+            white-space: nowrap;
+
+            @include media-breakpoint-down(md) {
                 display: none;
             }
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-left: .5rem !important;
+            padding-right: .5rem !important;
         }
 
         h3:not(:last-child)::after {
@@ -51,7 +71,6 @@ a {
         font-family: "Arizonia", cursive;
         @extend .display-5;
         @extend .fw-bold;
-        @extend .px-5;
 
         .ampersand {
             @extend .text-danger
@@ -146,5 +165,3 @@ a {
         }
     }
 }
-
-
